@@ -12,7 +12,7 @@ public class Main {
         new Thread(null, () -> manufacturer.buildCar(shop, CUSTOMER_COUNT), "Производитель Toyota").start();
 
         for (int i = 1; i <= CUSTOMER_COUNT; i++) {
-            new Thread(null, shop::sellCar, "Покупатель " + i).start();
+            new Thread(null, shop::sellCar, "Покупатель машины " + i).start();
         }
     }
 }
